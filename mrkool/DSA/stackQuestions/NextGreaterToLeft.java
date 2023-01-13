@@ -1,4 +1,10 @@
-package mrkool.stackQuestions;
+//package mrkool.stackQuestions;
+import java.util.Scanner;
+import java.util.Stack;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Iterator;
+
 /*
 "Next greater element on the left" of an element x is defined as the first element to left of x having value greater than x.
 Note -> If an element does not have any element on it's left side greater than it, consider -1 as it's "next greater element on left"
@@ -16,6 +22,47 @@ Next greater for 7 is 8
  */
 public class NextGreaterToLeft {
     public static void main(String[] args) {
-   
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the size of the array");
+    int n = sc.nextInt();
+    int[] arr = new int[n];
+    System.out.println("Enter the array elements");
+    for(int i = 0; i < n; i++) {
+      arr[i] = sc.nextInt();
+    }
+
+    Stack<Integer> s = new Stack<>();
+    s = NGL(arr);
+    System.out.println(s);	
+    }
+
+    static Stack<Integer> NGL(int[] arr) {
+     Stack<Integer> useStack = new Stack<>();
+     Stack<Integer> ansStack = new Stack<>();
+     List<Integer> ans = new ArrayList<>();
+
+     for(int i = 0; i < arr.length; i++) {
+      if (i == 0) {
+        ansStack.push(-1);
+        useStack.push(arr[i]);
+      }  
+      else{
+       while (!useStack.isEmpty() && useStack.peek() < arr[i]) {
+         useStack.pop();
+       }
+       if (useStack.isEmpty()) {
+        ansStack.push(-1);
+        useStack.push(arr[i]);
+       }
+       else{
+         ansStack.push(useStack.peek());
+         useStack.push(arr[i]);
+       }
+      }
+     }
+      
+     //Iterator<Integer> Value = new ansStack.iterator();
+     return ansStack; 
+
     }
 }
