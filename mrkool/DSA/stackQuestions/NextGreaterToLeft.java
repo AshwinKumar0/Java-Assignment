@@ -60,7 +60,7 @@ public class NextGreaterToLeft {
       }
      }
       
-     //Iterator<Integer> Value = new ansStack.iterator();
+     //Iterator<Integer> Value =  ansStack.iterator();
      return ansStack; 
 
     }
