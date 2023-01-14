@@ -1,4 +1,4 @@
-package mrkool.DSA;
+
 
 public class Test {
     public static void main(String[] args) {

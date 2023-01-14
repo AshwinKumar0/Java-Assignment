@@ -1,5 +1,4 @@
 package mrkool.stackQuestions;
-
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -17,6 +16,7 @@ public class BalancedBrackets {
     public static void  main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Expression");
         String str = sc.nextLine();
         str = str.replaceAll(" ","");
         Stack<Character> st = new Stack<>();

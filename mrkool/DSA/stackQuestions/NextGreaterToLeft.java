@@ -1,4 +1,4 @@
-//package mrkool.stackQuestions;
+package mrkool.stackQuestions;
 import java.util.Scanner;
 import java.util.Stack;
 import java.util.ArrayList;
@@ -31,8 +31,7 @@ public class NextGreaterToLeft {
       arr[i] = sc.nextInt();
     }
 
-    Stack<Integer> s = new Stack<>();
-    s = NGL(arr);
+    Stack<Integer> s = NGL(arr);
     System.out.println(s);	
     }
 
@@ -47,7 +46,7 @@ public class NextGreaterToLeft {
         useStack.push(arr[i]);
       }  
       else{
-       while (!useStack.isEmpty() && useStack.peek() < arr[i]) {
+       while (!useStack.isEmpty() && useStack.peek() <= arr[i]) {
          useStack.pop();
        }
        if (useStack.isEmpty()) {
