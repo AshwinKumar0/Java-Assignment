@@ -12,6 +12,7 @@ Next greater for 1 is 12
 Next greater for 12 is -1
 Next greater for 6 is 8
 Next greater for 8 is -1
+
 Next greater for 7 is -1
  */
 import java.util.Arrays;
