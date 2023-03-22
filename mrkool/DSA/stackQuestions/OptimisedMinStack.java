@@ -11,6 +11,8 @@ class minStack {
         Data = new int[size];
         Top = -1;
         Min = Integer.MIN_VALUE;
+        var myVar = "hello";
+        var a = 9;
 
     }
 
