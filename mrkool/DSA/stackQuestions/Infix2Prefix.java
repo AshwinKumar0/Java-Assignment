@@ -2,7 +2,7 @@ package mrkool.stackQuestions;
 import java.util.Stack;
 public class Infix2Prefix {
     public static void main(String[] args) {
-      String Infix = "5 * (7 - 2)";
+      String Infix = "((2+((6*4)/8))-3)";
         System.out.println(ConvertToPrefix(Infix));
     }
     static String ConvertToPrefix(String str) {
