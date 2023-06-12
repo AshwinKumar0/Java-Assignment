@@ -16,8 +16,7 @@ package mrkool.stackQuestions;
  */
 
 import java.util.*;
-
-
+import java.util.Stack;
 
 public class StockSpan {
 
